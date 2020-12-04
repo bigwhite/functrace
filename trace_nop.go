@@ -1,8 +1,8 @@
 // +build !trace
 
-package trace
+package functrace
 
-func trace() func() {
+func Trace() func() {
 	return func() {
 
 	}

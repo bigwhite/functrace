@@ -1,6 +1,6 @@
 // +build trace
 
-package trace
+package functrace
 
 import (
 	"bytes"
@@ -30,7 +30,7 @@ func printTrace(id uint64, name, typ string, indent int) {
 	fmt.Printf("g[%02d]:%s%s%s\n", id, indents, typ, name)
 }
 
-func trace() func() {
+func Trace() func() {
 	pc, _, _, ok := runtime.Caller(1)
 	if !ok {
 		return nil
