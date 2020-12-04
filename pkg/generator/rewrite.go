@@ -26,7 +26,7 @@ func hasFuncDecl(f *ast.File) bool {
 	return false
 }
 
-func Rewrite(filename string, oldSource []byte) ([]byte, error) {
+func Rewrite(filename string) ([]byte, error) {
 	fset := token.NewFileSet()
 	oldAST, err := parser.ParseFile(fset, filename, nil, 0)
 	if err != nil {

@@ -1,0 +1,36 @@
+package main
+
+import "fmt"
+import "github.com/bigwhite/functrace"
+
+type Foo struct{}
+
+func (Foo) F() {
+	defer functrace.Trace()()
+	D()
+}
+
+func A1() {
+	defer functrace.Trace()()
+	B1()
+}
+
+func B1() {
+	defer functrace.Trace()()
+	C1()
+}
+
+func C1() {
+	defer functrace.Trace()()
+	D()
+}
+
+func D() {
+	defer functrace.Trace()()
+}
+
+func main() {
+	defer functrace.Trace()()
+	A1()
+	fmt.Println("ok")
+}

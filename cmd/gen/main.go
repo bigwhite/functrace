@@ -46,7 +46,7 @@ func main() {
 		return
 	}
 
-	newSrc, err := generator.Rewrite(file, nil)
+	newSrc, err := generator.Rewrite(file)
 	if err != nil {
 		panic(err)
 	}
