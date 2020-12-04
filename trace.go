@@ -33,7 +33,7 @@ func printTrace(id uint64, name, typ string, indent int) {
 func Trace() func() {
 	pc, _, _, ok := runtime.Caller(1)
 	if !ok {
-		return nil
+		panic("not found caller")
 	}
 
 	id := getGID()
