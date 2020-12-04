@@ -1,6 +1,6 @@
 package main
 
-//go:generate gen
+//go:generate ../../gen -w main.go
 
 import "sync"
 
