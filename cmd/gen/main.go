@@ -45,7 +45,6 @@ func main() {
 		usage()
 		return
 	}
-
 	newSrc, err := generator.Rewrite(file)
 	if err != nil {
 		panic(err)
@@ -56,7 +55,6 @@ func main() {
 		return
 	}
 
-	// write to the source file
 	f, err := os.OpenFile(file, os.O_RDWR, 0666)
 	if err != nil {
 		fmt.Printf("open %s error: %v\n", file, err)
