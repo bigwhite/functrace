@@ -7,6 +7,7 @@
 ```
 $go get github.com/bigwhite/functrace/cmd/gen
 ```
+And make sure the gen executable file is configured as part of the PATH env variable.
 
 ### Generate trace entry for your packages
 
