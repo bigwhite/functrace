@@ -28,7 +28,7 @@ func hasFuncDecl(f *ast.File) bool {
 
 func Rewrite(filename string) ([]byte, error) {
 	fset := token.NewFileSet()
-	oldAST, err := parser.ParseFile(fset, filename, nil, 0)
+	oldAST, err := parser.ParseFile(fset, filename, nil, parser.ParseComments)
 	if err != nil {
 		return nil, fmt.Errorf("error parsing %s: %w", filename, err)
 	}
