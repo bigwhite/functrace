@@ -39,3 +39,5 @@ add trace for ./gnet.go ok
 [gen -w ./acceptor_windows.go]
 add trace for ./acceptor_windows.go ok
 ```
+
+After debugging, you can use 'git checkout .' to recover the origin status of your local workspace.
