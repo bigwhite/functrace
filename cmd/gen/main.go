@@ -51,6 +51,12 @@ func main() {
 		panic(err)
 	}
 
+	if newSrc == nil {
+		// add nothing to the source file. no change
+		fmt.Printf("no trace added for %s\n", file)
+		return
+	}
+
 	if !wrote {
 		fmt.Println(string(newSrc))
 		return
