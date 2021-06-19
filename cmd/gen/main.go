@@ -3,8 +3,9 @@ package main
 import (
 	"flag"
 	"fmt"
+	"io/ioutil"
 	"os"
-	"strings"
+	"path/filepath"
 
 	"github.com/bigwhite/functrace/pkg/generator"
 )
@@ -40,8 +41,7 @@ func main() {
 	if len(os.Args) == 2 {
 		file = os.Args[1]
 	}
-
-	if !strings.Contains(file, ".go") {
+	if filepath.Ext(file) != ".go" {
 		usage()
 		return
 	}
@@ -63,15 +63,9 @@ func main() {
 	}
 
 	// write to the source file
-	f, err := os.OpenFile(file, os.O_RDWR, 0666)
-	if err != nil {
-		fmt.Printf("open %s error: %v\n", file, err)
+	if err = ioutil.WriteFile(file, newSrc, 0666); err != nil {
+		fmt.Printf("write %s error: %v\n", file, err)
 		return
 	}
-	defer f.Close()
-
-	f.Seek(0, os.SEEK_SET)
-	f.Truncate(0)
-	f.Write(newSrc)
 	fmt.Printf("add trace for %s ok\n", file)
 }
