@@ -23,8 +23,15 @@ let's add trace in batches for github.com/panjf2000/gnet, the steps is below:
 
 - git clone https://github.com/panjf2000/gnet.git
 - cd gnet
-- cp the scripts/batch_add_trace.sh of functrace to gnet dir
-- execute ```bash batch_add_trace.sh``` and it will output:
+- execute the following command:
+
+```
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/bigwhite/functrace/main/scripts/batch_add_trace.sh)"
+```
+
+>If the access to github.com is very slow in your area, then you can copy scripts/batch_add_trace.sh of functrace to gnet dir and execute ```bash batch_add_trace.sh```.
+
+The command will output:
 
 ```
 [gen -w ./ringbuffer/ring_buffer_test.go]
