@@ -4,11 +4,17 @@ package functrace
 
 import (
 	"bytes"
-	"fmt"
+	"log"
+	"os"
 	"runtime"
 	"strconv"
 	"sync"
 )
+
+func init() {
+	log.Default().SetFlags(log.Lmicroseconds | log.Ltime | log.Ldate)
+	log.Default().SetOutput(os.Stdout)
+}
 
 var mu sync.Mutex
 var m = make(map[uint64]int)
@@ -27,7 +33,7 @@ func printTrace(id uint64, name, typ string, indent int) {
 	for i := 0; i < indent; i++ {
 		indents += "\t"
 	}
-	fmt.Printf("g[%02d]:%s%s%s\n", id, indents, typ, name)
+	log.Printf("g[%02d]:%s%s%s\n", id, indents, typ, name)
 }
 
 func Trace() func() {
