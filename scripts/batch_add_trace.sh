@@ -1,9 +1,9 @@
 #!/bin/bash 
 
-files=`find . -name "*.go" -print`
-echo $files
+files=`find . -not -path "./vendor/**/*" -name "*.go" -print`
 
 for f in $files
-do 
-		gen -w $f
+do
+    echo $f
+    gen -w $f
 done
