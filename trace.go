@@ -29,7 +29,11 @@ func printTrace(id uint64, name, typ string, indent int, cost time.Duration) {
 	for i := 0; i < indent; i++ {
 		indents += "\t"
 	}
-	fmt.Printf("g[%02d]:%s%s%s cost:%v\n", id, indents, typ, name, cost)
+	if cost > 0 {
+		fmt.Printf("g[%02d]:%s%s%s cost:%v\n", id, indents, typ, name, cost)
+	} else {
+		fmt.Printf("g[%02d]:%s%s%s \n", id, indents, typ, name)
+	}
 }
 
 func Trace() func() {
@@ -53,8 +57,7 @@ func Trace() func() {
 		v := m[id]
 		m[id] = v - 1
 		mu.Unlock()
-		stop := time.Now()
-		cost := time.Now().Sub()
+		cost := time.Now().Sub(start)
 		printTrace(id, name, "<-", v, cost)
 	}
 }
