@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="be74cec9-0eaf-44fd-9972-c214848dffe4" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/gen/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/gen/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/example_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/gen-demo/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/examples/gen-demo/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/gen-demo/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/examples/gen-demo/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/generator/rewrite.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/generator/rewrite.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/generator/rewrite_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/generator/rewrite_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/generator/testdata/no_import.golden" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/generator/testdata/no_import.golden" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/generator/testdata/with_import_no_trace.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/generator/testdata/with_import_no_trace.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/generator/testdata/with_import_no_trace.golden" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/generator/testdata/with_import_no_trace.golden" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/generator/testdata/with_import_with_trace.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/generator/testdata/with_import_with_trace.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/generator/testdata/with_import_with_trace.golden" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/generator/testdata/with_import_with_trace.golden" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/batch_add_trace.sh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/batch_add_trace.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trace.go" beforeDir="false" afterPath="$PROJECT_DIR$/trace.go" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="GOROOT" url="file:///usr/local/go" />
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2RENOtfQOBSVLDRSaBkkQTnaDtQ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "go.import.settings.migrated": "true",
+    "go.sdk.automatically.set": "true",
+    "last_opened_file_path": "/Users/pengxuan/Desktop/go/project/src/github.com/pengxuan37/functrace",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm"
+  }
+}]]></component>
+  <component name="RunManager" selected="Go Test.ExampleTrace in github.com/pengxuan37/functrace">
+    <configuration name="ExampleTrace in github.com/pengxuan37/functrace" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="functrace" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="github.com/pengxuan37/functrace" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QExampleTrace\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestRewrite in github.com/bigwhite/functrace/pkg/generator" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="functrace" />
+      <working_directory value="$PROJECT_DIR$/pkg/generator" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="github.com/bigwhite/functrace/pkg/generator" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestRewrite\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestRewrite in github.com/pengxuan37/functrace/pkg/generator" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="functrace" />
+      <working_directory value="$PROJECT_DIR$/pkg/generator" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="github.com/pengxuan37/functrace/pkg/generator" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestRewrite\E$" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Test.ExampleTrace in github.com/pengxuan37/functrace" />
+        <item itemvalue="Go Test.TestRewrite in github.com/pengxuan37/functrace/pkg/generator" />
+        <item itemvalue="Go Test.TestRewrite in github.com/bigwhite/functrace/pkg/generator" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VgoProject">
+    <settings-migrated>true</settings-migrated>
+  </component>
+</project>

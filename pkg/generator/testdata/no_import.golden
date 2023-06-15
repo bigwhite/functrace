@@ -1,6 +1,6 @@
 package main
 
-import "github.com/bigwhite/functrace"
+import "github.com/pengxuan37/functrace"
 
 func A1() {
 	defer functrace.Trace()()

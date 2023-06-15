@@ -1,7 +1,9 @@
 package main
 
-import "fmt"
-import "github.com/bigwhite/functrace"
+import (
+	"fmt"
+	"github.com/pengxuan37/functrace"
+)
 
 type Foo struct{}
 

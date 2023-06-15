@@ -1,3 +1,4 @@
+//go:build trace
 // +build trace
 
 package functrace
@@ -8,6 +9,7 @@ import (
 	"runtime"
 	"strconv"
 	"sync"
+	"time"
 )
 
 var mu sync.Mutex
@@ -22,15 +24,20 @@ func getGID() uint64 {
 	return n
 }
 
-func printTrace(id uint64, name, typ string, indent int) {
+func printTrace(id uint64, name, typ string, indent int, cost time.Duration) {
 	indents := ""
 	for i := 0; i < indent; i++ {
 		indents += "\t"
 	}
-	fmt.Printf("g[%02d]:%s%s%s\n", id, indents, typ, name)
+	if cost > 0 {
+		fmt.Printf("g[%02d]:%s%s%s cost:%v\n", id, indents, typ, name, cost)
+	} else {
+		fmt.Printf("g[%02d]:%s%s%s \n", id, indents, typ, name)
+	}
 }
 
 func Trace() func() {
+	start := time.Now()
 	pc, _, _, ok := runtime.Caller(1)
 	if !ok {
 		panic("not found caller")
@@ -44,12 +51,13 @@ func Trace() func() {
 	v := m[id]
 	m[id] = v + 1
 	mu.Unlock()
-	printTrace(id, name, "->", v+1)
+	printTrace(id, name, "->", v+1, time.Duration(0))
 	return func() {
 		mu.Lock()
 		v := m[id]
 		m[id] = v - 1
 		mu.Unlock()
-		printTrace(id, name, "<-", v)
+		cost := time.Now().Sub(start)
+		printTrace(id, name, "<-", v, cost)
 	}
 }

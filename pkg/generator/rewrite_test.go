@@ -7,7 +7,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/bigwhite/functrace/pkg/generator"
+	"github.com/pengxuan37/functrace/pkg/generator"
 )
 
 var update = flag.Bool("update", false, "update .golden files")
