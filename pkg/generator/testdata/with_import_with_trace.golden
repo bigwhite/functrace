@@ -4,7 +4,6 @@ import (
 	"fmt"
 
 	"github.com/pengxuan37/functrace"
-	"github.com/pengxuan37/functrace"
 )
 
 func A1() {
