@@ -1,4 +1,4 @@
-module github.com/bigwhite/functrace
+module github.com/pengxuan37/functrace
 
 go 1.14
 

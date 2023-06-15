@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/bigwhite/functrace"
+	"github.com/pengxuan37/functrace"
 	"sync"
 )
 

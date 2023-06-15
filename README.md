@@ -5,13 +5,13 @@
 ### Install gen
 
 ```
-$go get github.com/bigwhite/functrace/cmd/gen
+$go get github.com/pengxuan37/functrace/cmd/gen
 ```
 And make sure the gen executable file is configured as part of the PATH env variable.
 
 ### Generate trace entry for your packages
 
-See the demo case: https://github.com/bigwhite/functrace/tree/main/examples/gen-demo
+See the demo case: https://github.com/pengxuan37/functrace/tree/main/examples/gen-demo
 
 ### Add trace in batches
 

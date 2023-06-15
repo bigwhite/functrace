@@ -26,6 +26,22 @@ func hasFuncDecl(f *ast.File) bool {
 	return false
 }
 
+func hasImport(f *ast.File, pkgName string) bool {
+	for _, decl := range f.Decls {
+		if genDecl, ok := decl.(*ast.GenDecl); ok && genDecl.Tok == token.IMPORT {
+			// iterate through import specs
+			for _, spec := range genDecl.Specs {
+				if importSpec, ok := spec.(*ast.ImportSpec); ok {
+					if importSpec.Path.Value == `"`+pkgName+`"` {
+						return true
+					}
+				}
+			}
+		}
+	}
+	return false
+}
+
 func Rewrite(filename string) ([]byte, error) {
 	fset := token.NewFileSet()
 	oldAST, err := parser.ParseFile(fset, filename, nil, parser.ParseComments)
@@ -39,7 +55,7 @@ func Rewrite(filename string) ([]byte, error) {
 	}
 
 	// add import declaration
-	astutil.AddImport(fset, oldAST, "github.com/bigwhite/functrace")
+	astutil.AddImport(fset, oldAST, "github.com/pengxuan37/functrace")
 	//fmt.Printf("added=%#v\n", added)
 
 	// inject code into each function declaration
