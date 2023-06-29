@@ -1,3 +1,4 @@
+.PHONY: all build install clean
 
 all: build
 
@@ -6,6 +7,7 @@ build:
 
 install: 
 	go install github.com/bigwhite/functrace/cmd/gen
+
 clean:
 	go clean
 	rm -fr gen
